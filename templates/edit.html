@@ -1,0 +1,64 @@
+{% extends 'basecode.html' %}
+{% block body %}
+    <form action="/edit_details/{{reg.id}}" method="POST">
+        {% csrf_token %}
+    <table border='0' width='480px' cellpadding='0' cellspacing='0' align='center' >
+        <center><tr>
+           <td><h2><b style="font-family: Times New Roman, Times, serif; ">EDIT REGISTRATION FORM </b></h2></td>
+        </tr><center>
+    <table border='0' width='500' align='center' >
+        
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Full Name:</b></td>
+            <td><input type='text' name='name' value="{{reg.name}}"></td>
+        </tr>
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Address:</b></td>
+            <td><input type='text' name='address' value="{{reg.address}}"></td> 
+        </tr>
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Age:</b></td>
+            <td><input type='text' name='age' value="{{reg.age}}"></td>
+        </tr>
+        
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Contact:</b></td>
+            <td><input type='text' name='contact' value="{{reg.contact}}"></td>
+        </tr>
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Email:</b></td>
+            <td><input type='email' name='email' value="{{reg.email}}"></td>
+        </tr>
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Gender:</b></td>
+            <td><input type='text' name='gender' value="{{reg.gender}}"> 
+                
+            </td>
+        </tr>
+        <tr> <td>&nbsp;</td> </tr>
+        <tr>
+            <td align='center'><b>Qualification:</b></td>
+            <td><input type='text' name='qualification' value="{{reg.qualification}}"> 
+        <tr> <td>&nbsp;</td> </tr>
+        <table border='0' cellpadding='0' cellspacing='0' width='480px' align='center'>
+        <tr>
+            <td align='center'><input type='submit' class="btn btn-sm btn-info" name='REGISTER' value="Update"></td>
+        </tr>
+        
+
+
+        
+        </table>
+        
+        </table>
+        
+    </table>
+    
+    </form>
+{% endblock %}

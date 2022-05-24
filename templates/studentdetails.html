@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+    <title>Student Registration System</title>
+    <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 30%;
+      }
+      
+      .card:hover {
+        box-shadow: 0 10px 16px 0 rgba(68, 64, 64, 0.2);
+      }
+      
+      .container {
+        padding-right:  800px;
+      }
+      </style>
+
+</head>
+<body style="background-image: url('https://media.istockphoto.com/photos/vector-hexagons-pattern-geometric-abstract-background-with-simple-picture-id1307794659?b=1&k=20&m=1307794659&s=170667a&w=0&h=8utxIGEIgxxX_rUGxa5DtS7MQIaCHvQjt1eBrU28lEg=');" >
+
+<nav class="navbar navbar-light" style="background-color: hwb(210 68% 29%);">
+    <!-- Navbar content -->
+
+        
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav"> 
+        <li class="active"><a style="color: black;" href="{% url 'index' %}"><strong>HOME</strong></a></li>
+        <li><a style="color: black;" href="{% url 'home' %}"><strong>STUDENT REGISTRATION</strong></a></li>
+        <li><a style="color: black;" href="{% url 'studentlist' %}"><strong>VIEW LIST</strong></a></li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+    <div align="center">
+  <h2 align="center"><b style="font-family: Times New Roman, Times, serif; ">STUDENT DETAILS</b></h2>
+
+<div class="card" >
+  <div class="container">
+    <h4>&nbsp;&nbsp;&nbsp;&nbsp;Name:&nbsp;&nbsp;{{reg.name}}</h4> 
+    <p>&nbsp;&nbsp;Address:&nbsp;&nbsp;&nbsp;{{reg.address}}</p>
+    <p>Age:&nbsp;&nbsp;&nbsp;&nbsp;{{reg.age}}</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact:&nbsp;&nbsp;&nbsp;{{reg.contact}}</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:&nbsp;{{reg.email}}</p>
+    <p>Gender:&nbsp;&nbsp;{{reg.gender}}</p>
+    <p>Qualification:&nbsp;&nbsp;{{reg.qualification}}</p> 
+  </div>
+</div>
+</div>
+
+
+
+
+    
+  
+</body>
+</html>
